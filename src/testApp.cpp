@@ -4,7 +4,19 @@
 void testApp::setup(){
     ofEnableDepthTest();
     
-    ofSetVerticalSync(false);
+    ofSetVerticalSync(true);
+    
+    ofSetFrameRate(30);
+    
+    fsOut = new ofxBMFrameSync();
+    
+    
+    
+}
+
+//--------------------------------------------------------------
+void testApp::exit(){
+    delete fsOut;
 }
 
 //--------------------------------------------------------------
@@ -15,55 +27,14 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
     
-    if(fbo.getWidth() != ofGetWidth() || fbo.getHeight()!=ofGetHeight())
-        fbo.allocate(ofGetWidth(),ofGetHeight(),GL_RGBA,8);
-    static int renderFr = 0;
-    
-    for(int fr = 0; fr < 600 ; fr++){
-        
-        fbo.begin();
-        
-        ofBackground(0,0,0);
-        ofPushMatrix();
-        ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
-        ofRotate(renderFr*3, 1, 1, 0.5);
-        ofSetColor(255, 0, 0);
-        ofBoxPrimitive(200,200,200).draw();
-        ofPopMatrix();
-        ofDrawBitmapString(ofToString(ofGetFrameRate(),2), 20,20);
-        fbo.end();
-        fbo.draw(0,0);
-        
-        
-        if(ofGetFrameNum()<5)
-            return;
-        
-        ofPixels pix;
-        pix.allocate(ofGetWidth(),ofGetHeight(),OF_IMAGE_COLOR_ALPHA);
-        
-        fbo.readToPixels(pix);
-        
-        int totalpix = ofGetWidth()*ofGetHeight();
-        unsigned char c;
-        unsigned char* buf = pix.getPixels();
-        for(int i=0;i<totalpix;i++){
-            c = buf[i*4];
-            buf[i*4] = buf[i*4 + 2];
-            buf[i*4+2] = c;
-        }
-        
-        while(fsOut.getFramePosition() < 0.5f){
-            
-            sleep(0);
-        }
-        while(fsOut.getFramePosition() >= 0.5f){
-            sleep(0);
-        }
-        
-        fsOut.renderFrame(buf, totalpix*4);
-        
-        renderFr++;
-    }
+    return;
+    fsOut->externLock();
+    ofBackground(120, 0, 0);
+    ofTranslate(100, 100);
+    ofRotate(ofGetFrameNum(), 0, 0, 1);
+    ofRect(0, 0, 100, 100);
+    //ofDrawBitmapString(ofToString(ofGetFrameNum()), 100,100);
+    fsOut->externUnlock();
 }
 
 //--------------------------------------------------------------

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0330EAEE1871FB3E00471137 /* ofxTCPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0330EAE61871FB3E00471137 /* ofxTCPClient.cpp */; };
+		0330EAEF1871FB3E00471137 /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0330EAE81871FB3E00471137 /* ofxTCPManager.cpp */; };
+		0330EAF01871FB3E00471137 /* ofxTCPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0330EAEA1871FB3E00471137 /* ofxTCPServer.cpp */; };
+		0330EAF11871FB3E00471137 /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0330EAEC1871FB3E00471137 /* ofxUDPManager.cpp */; };
 		038FAFC7186361A900200D92 /* DeckLinkAPIDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 038FAFBD186361A900200D92 /* DeckLinkAPIDispatch.cpp */; };
 		038FAFCA186361A900200D92 /* ofxBMFrameSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 038FAFC5186361A900200D92 /* ofxBMFrameSync.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
@@ -62,6 +66,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0330EAE21871FB3E00471137 /* Instructions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Instructions.txt; sourceTree = "<group>"; };
+		0330EAE41871FB3E00471137 /* ofxNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNetwork.h; sourceTree = "<group>"; };
+		0330EAE51871FB3E00471137 /* ofxNetworkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNetworkUtils.h; sourceTree = "<group>"; };
+		0330EAE61871FB3E00471137 /* ofxTCPClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTCPClient.cpp; sourceTree = "<group>"; };
+		0330EAE71871FB3E00471137 /* ofxTCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPClient.h; sourceTree = "<group>"; };
+		0330EAE81871FB3E00471137 /* ofxTCPManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTCPManager.cpp; sourceTree = "<group>"; };
+		0330EAE91871FB3E00471137 /* ofxTCPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPManager.h; sourceTree = "<group>"; };
+		0330EAEA1871FB3E00471137 /* ofxTCPServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTCPServer.cpp; sourceTree = "<group>"; };
+		0330EAEB1871FB3E00471137 /* ofxTCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPServer.h; sourceTree = "<group>"; };
+		0330EAEC1871FB3E00471137 /* ofxUDPManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxUDPManager.cpp; sourceTree = "<group>"; };
+		0330EAED1871FB3E00471137 /* ofxUDPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxUDPManager.h; sourceTree = "<group>"; };
+		033C28D01871B85900C70A6C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		033C28D11871B85900C70A6C /* license.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.md; sourceTree = "<group>"; };
+		033C28D21871B85900C70A6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		033C28D41871B85900C70A6C /* MSATimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSATimer.h; sourceTree = "<group>"; };
 		038FAFB2186361A900200D92 /* DeckLinkAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPI.h; sourceTree = "<group>"; };
 		038FAFB3186361A900200D92 /* DeckLinkAPI_v7_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPI_v7_1.h; sourceTree = "<group>"; };
 		038FAFB4186361A900200D92 /* DeckLinkAPI_v7_3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPI_v7_3.h; sourceTree = "<group>"; };
@@ -134,6 +153,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0330EAE01871FB3E00471137 /* ofxNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				0330EAE11871FB3E00471137 /* docs */,
+				0330EAE31871FB3E00471137 /* src */,
+			);
+			name = ofxNetwork;
+			path = ../../../addons/ofxNetwork;
+			sourceTree = "<group>";
+		};
+		0330EAE11871FB3E00471137 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				0330EAE21871FB3E00471137 /* Instructions.txt */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		0330EAE31871FB3E00471137 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0330EAE41871FB3E00471137 /* ofxNetwork.h */,
+				0330EAE51871FB3E00471137 /* ofxNetworkUtils.h */,
+				0330EAE61871FB3E00471137 /* ofxTCPClient.cpp */,
+				0330EAE71871FB3E00471137 /* ofxTCPClient.h */,
+				0330EAE81871FB3E00471137 /* ofxTCPManager.cpp */,
+				0330EAE91871FB3E00471137 /* ofxTCPManager.h */,
+				0330EAEA1871FB3E00471137 /* ofxTCPServer.cpp */,
+				0330EAEB1871FB3E00471137 /* ofxTCPServer.h */,
+				0330EAEC1871FB3E00471137 /* ofxUDPManager.cpp */,
+				0330EAED1871FB3E00471137 /* ofxUDPManager.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		033C28CF1871B85900C70A6C /* ofxMSATimer */ = {
+			isa = PBXGroup;
+			children = (
+				033C28D01871B85900C70A6C /* .gitignore */,
+				033C28D11871B85900C70A6C /* license.md */,
+				033C28D21871B85900C70A6C /* README.md */,
+				033C28D31871B85900C70A6C /* src */,
+			);
+			name = ofxMSATimer;
+			path = ../../../addons/ofxMSATimer;
+			sourceTree = "<group>";
+		};
+		033C28D31871B85900C70A6C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				033C28D41871B85900C70A6C /* MSATimer.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		038FAFB0186361A900200D92 /* ofxBMFrameSync */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +253,8 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				0330EAE01871FB3E00471137 /* ofxNetwork */,
+				033C28CF1871B85900C70A6C /* ofxMSATimer */,
 				038FAFB0186361A900200D92 /* ofxBMFrameSync */,
 			);
 			name = addons;
@@ -350,7 +426,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0330EAF01871FB3E00471137 /* ofxTCPServer.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				0330EAEF1871FB3E00471137 /* ofxTCPManager.cpp in Sources */,
+				0330EAF11871FB3E00471137 /* ofxUDPManager.cpp in Sources */,
+				0330EAEE1871FB3E00471137 /* ofxTCPClient.cpp in Sources */,
 				038FAFC7186361A900200D92 /* DeckLinkAPIDispatch.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				038FAFCA186361A900200D92 /* ofxBMFrameSync.cpp in Sources */,

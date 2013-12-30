@@ -3,11 +3,16 @@
 #include "ofMain.h"
 #include "ofxBMFrameSync.h"
 
+#include "MSATimer.h"
+
+#include "OpenGL/OpenGL.h"
+
 class testApp : public ofBaseApp{
 	public:
 		void setup();
 		void update();
 		void draw();
+        void exit();
 		
 		void keyPressed(int key);
 		void keyReleased(int key);
@@ -19,6 +24,8 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    ofxBMFrameSync fsOut;
-    ofFbo fbo;
+    ofxBMFrameSync* fsOut;
+    
+    msa::Timer msatimer;
+    
 };
